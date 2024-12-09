@@ -1,42 +1,47 @@
+"use client"
 import Link from "next/link";
+import "./header.css"
 export function Header() {
 
-    return <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <a className="navbar-brand" href="#">
-    Navbar
-  </a>
-  <button
-    className="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNav"
-    aria-controls="navbarNav"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span className="navbar-toggler-icon" />
-  </button>
-  <div className="collapse navbar-collapse" id="navbarNav">
-    <ul className="navbar-nav">
-      <li className="nav-item active">
-        <Link className="nav-link" href="/signup">
-          SignUP
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" href="/login">
-          LogIn
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" href="/user">
-          Users
-        </Link>
-      </li>
-    </ul>
+    return <div className="mb-5">
+    <nav className="navbar custom-navbar">
+      <a className="navbar-brand" href="#" style={{ fontWeight: "bold", fontSize: "1.5rem", color: "#007bff" }}>
+        Navbar
+      </a>
+      <button
+        className="menu-toggler"
+        onClick={() => document.querySelector(".menu-items").classList.toggle("show")}
+      >
+        ☰
+      </button>
+      <ul className="menu-items">
+        <li className="nav-item">
+          <Link className="nav-link" href="/">
+            Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" href="/signup">
+            Sign Up
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" href="/login">
+            Log In
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" href="/user">
+            Users
+          </Link>
+        </li>
+        
+        
+      </ul>
+    </nav>
   </div>
-</nav>
-
-    </div>
+  
+  
+  
+  
 }
