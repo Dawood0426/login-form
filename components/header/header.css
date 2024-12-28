@@ -42,15 +42,6 @@
     display: block;
   }
   
-  .menu-items li {
-    padding: 10px 15px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .menu-items li:last-child {
-    border-bottom: none;
-  }
-  
   .menu-items li a {
     text-decoration: none;
     color: #333;
